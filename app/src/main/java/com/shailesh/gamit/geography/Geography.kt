@@ -1,10 +1,12 @@
+package com.shailesh.gamit.geography
+
 import kotlin.math.acos
 import kotlin.math.cos
 import kotlin.math.sin
 
 class Geography {
     companion object{
-        fun distance(point1: point, point2: point, unit: String = "m"): Double {
+        fun distance(point1: Point, point2: Point, unit: String = "m"): Double {
             if (point1 == point2) {
                 return 0.0
             } else {
@@ -24,7 +26,7 @@ class Geography {
             }
         }
 
-        fun isPointInRadius(centerPoint: point, point: point, radius:Double, unit: String = "m"):Boolean{
+        fun isPointInRadius(centerPoint: Point, point: Point, radius:Double, unit: String = "m"):Boolean{
             if (centerPoint == point) {
                 return true
             } else {
@@ -49,4 +51,4 @@ class Geography {
     }
 }
 
-data class point(val lat:Double,val long:Double)
+data class Point(val lat:Double,val long:Double)
